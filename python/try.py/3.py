@@ -1,0 +1,14 @@
+#a
+tuple=("apple","banana","cherry")
+print(len(tuple))
+#b
+tuple=("apple","banana","cherry")
+print(tuple[0])
+#c
+tuple=("apple","banana","cherry")
+print(tuple[2])
+#d
+tuple=("apple","banana","cherry")
+tuple=tuple+("orange","kiwi","melon","mango")
+print(tuple)
+#e

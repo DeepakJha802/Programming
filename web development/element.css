@@ -1,0 +1,38 @@
+h1{
+    color: rgb(3, 116, 116);
+}
+p{
+    color: rgb(61, 241, 6);
+}
+li{
+    list-style-type: square;
+}
+li.special
+{
+    color: blueviolet;
+    font-style: oblique;
+    font-weight: bold;
+}
+span.special,em.special
+{
+    color: crimson;
+    font-weight: bolder;
+    font-kerning: normal;
+}
+li em{
+    color: rgb(5, 99, 99);
+}
+h1+p
+{
+    font-size: 200%;
+}
+a:hover 
+{
+color: brown;
+text-decoration: none;
+}
+body h1+p.special{
+    color: red;
+    background-color: blueviolet;
+    padding: 5px;
+}

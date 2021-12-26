@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <form action="" style="background-color: rgb(228, 204, 250);">
+      <p>
+        <video
+          src="video/college.mp4"
+          width="100%"
+          height="400"
+          autoplay
+          muted
+          loop
+        ></video>
+      </p>
+      <h1>PAYMENT FORM</h1>
+      <p>Required Fields Are Following By *</p>
+      <fieldset>
+        <legend>CONTACT DETAILS</legend>
+        <p>Name * <input type="text" name="name" id="name" required /></p>
+        <p>
+          Father's Name *
+          <input type="text" name="fathers_name" id="fathers_name" required />
+        </p>
+        <p>Gender *</p>
+        <p>
+          Male <input type="radio" name="gender" id="male" required /> Female
+          <input type="radio" name="gender" id="female" required /> Other's
+          <input type="radio" name="gender" id="other" required />
+        </p>
+        <p>
+          Date Of Birth * <input type="date" name="dob" id="dob" required />
+        </p>
+        <p>
+          Phone No *
+          <input type="text" name="phone_number" id="phone_number" required />
+        </p>
+        <p>E Mail * <input type="email" name="mail" id="mail" required /></p>
+        <p>
+          Identiffication Proof *
+          <select name="idifffication_proof" id="idifffication_proof" required>
+            <option value="">--iidifffication proof--</option>
+            <option value="Aadhar Card">Aadhar Card</option>
+            <option value="Pan Card">Pan Card</option>
+            <option value="Voter Id Card">Voter Id Card</option>
+            <option value="Passport">Passport</option>
+            <option value="Driving Lisence">Driving Lisence</option>
+          </select>
+        </p>
+        <p>
+          Identiffication No * <input type="text" name="Identiffication_No" id="Identiffication_No" required>
+        </p>
+        <p>
+          Pin Code *
+          <input type="text" name="pin_code" id="pin code" required />
+        </p>
+        District *
+        <input type="text" name="district" id="district" required /> State *
+        <input type="text" name="state" id="state" required />
+        <p>
+          Address *
+          <textarea
+            name="address"
+            id="address"
+            cols="75"
+            rows="7"
+            required
+          ></textarea>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Academics Details</legend>
+        <p>
+          College * <input type="text" name="college" id="college" required />
+        </p>
+        <p>
+          Course *
+          <select name="course" id="course" required>
+            <option value="">--course--</option>
+            <option value="M.tech">M.tech</option>
+            <option value="B.tech">B.tech</option>
+            <option value="MCA">MCA</option>
+            <option value="BCA">BCA</option>
+            <option value="Diploma">Diploma</option>
+          </select>
+        </p>
+        <p>
+          Branch *
+          <select name="branch" id="branch" required>
+            <option value="">--branch--</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="CSBS">CSBS</option>
+            <option value="AI&ML">AI&ML</option>
+            <option value="ECE">ECE</option>
+            <option value="EE">EE</option>
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+          </select>
+        </p>
+        <p>
+          Session *
+          <select name="session" id="session" required>
+            <option value="">--session--</option>
+            <option value="2018-2022">2018-2022</option>
+            <option value="2019-2023">2019-2023</option>
+            <option value="2020-2024">2020-2024</option>
+            <option value="2021-2025">2021-2025</option>
+          </select>
+        </p>
+        <p>
+          Sem *
+          <select name="semester" id="semester" required>
+            <option value="">--sem--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </p>
+        <p>Roll No * <input type="number" name="roll" id="roll" required /></p>
+        <p>Fee * <input type="text" name="fee" id="fee" required /></p>
+      </fieldset>
+      <fieldset>
+        <legend>Payment Details</legend>
+        <p>
+          Payment Method *
+          <select name="payment_method" id="payment_method" required>
+            <option value="">--Payment Method--</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+          </select>
+        </p>
+        <p>
+          Card Number *
+          <input type="text" name="card_number" id="card_number" required />
+        </p>
+        <p>CVV * <input type="password" name="cvv" id="cvv" required /></p>
+        <p>
+          Expiry Date *
+          <select name="expiry_date" id="expiry_date" required>
+            <option value="">--Month--</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="12">12</option>
+          </select>
+          <select name="Year" id="Year" required>
+            <option value="">--Year--</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+        </p>
+      </fieldset>
+      <p style="border: rgb(0, 0, 0); color:red">
+        <input style="padding: 5px; color: red;" type="submit" value="Pay Now" />
+        <button type="reset" style="padding: 5px; color:red">Reset</button>
+      </p>
+    </form>
+  </body>
+</html>
