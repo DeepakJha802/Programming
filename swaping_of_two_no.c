@@ -1,8 +1,8 @@
 //wap to swaping of two no.
 #include<stdio.h>
-int main()
+int main(void)
 {
-    int a,b,c,b1;
+    int a,b,c;
     printf("Enter Two Number Which You Have To Swaped : ");
     scanf("%d %d",&a,&b);
     c=a+b;

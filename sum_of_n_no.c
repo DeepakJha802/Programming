@@ -1,6 +1,6 @@
 //wap to print sum of n numbers.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int n,sum=0,i;
     printf("Enter The Value of n : ");

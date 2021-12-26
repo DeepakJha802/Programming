@@ -1,6 +1,6 @@
 //wap to find the subtraction of two no.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int n1,n2,subtract;
     printf("Enter two Numbers : ");

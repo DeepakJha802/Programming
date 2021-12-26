@@ -6,11 +6,8 @@ int main(void)
     printf("Enter the marks of five students :\n");
     for(i=0;i<5;i++)
     {
-    scanf("%d",&marks[i]);
-    }
-    for(i=0;i<5;i++)
-    {
-        sum=sum+marks[i];
+        scanf("%d",&marks[i]);
+        sum += marks[i];
     }
     avg=sum/5;
     printf("Average marks of five students : %d",avg);

@@ -1,6 +1,6 @@
 //wap to find character is vowel or consonent.
 #include<stdio.h>
-int main()
+int main(void)
 {
     char x;
     printf("Enter a Character : ");

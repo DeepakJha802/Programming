@@ -1,6 +1,6 @@
 //wap to print size of data type.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int a=2,x;
     float b=3;
