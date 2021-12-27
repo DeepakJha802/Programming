@@ -1,6 +1,6 @@
 //wap to print enterd no is even or odd.
 #include <stdio.h>
-int main()
+int main(void)
 {
     int num1, rem1;
 

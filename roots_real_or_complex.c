@@ -1,6 +1,6 @@
 ///wap to print find the root of quadratic equations is real or complex.
 #include<stdio.h>
-int main()
+int main(void)
 {
 int a,b,c,D;
 printf("Enter The Coefficients of Quadratic Equation : ");

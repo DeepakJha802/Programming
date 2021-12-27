@@ -1,6 +1,6 @@
 //wap to print no is even or odd by using if else.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int x;
     printf("Enter a Number : ");

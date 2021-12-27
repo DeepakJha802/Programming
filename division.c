@@ -1,6 +1,6 @@
 //wap to division of two no.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int n1,n2,divide;
     printf("Enter two numbers : ");

@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()
+int main(void)
 {
     float x,y,z;
     printf("Enter Two Number Which You Have To Multiply : ");

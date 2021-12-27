@@ -1,6 +1,6 @@
 //wap tp print multiplication of two no.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int n1,n2,multiply;
     printf("Enter two numbers : ");

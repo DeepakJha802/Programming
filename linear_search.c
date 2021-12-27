@@ -3,7 +3,7 @@
 
 int linearsearch(int, int *, int);
 
-int main()
+int main(void)
 {
     int search,c,n;
     int *ptr,i;
@@ -21,7 +21,7 @@ int main()
         printf(" %d ",*(ptr+i));
     }
 
-    printf("Enter a number to search :\n");
+    printf("\nEnter a number to search :\n");
     scanf("%d",&search);
 
     linearsearch(search, ptr, n);

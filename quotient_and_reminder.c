@@ -1,6 +1,6 @@
 //wap to print quotient and reminder.
 #include<stdio.h>
-int main()
+int main(void)
 {
     int x,y,z,a;
     printf("Enter The Divident and Divisor : ");
