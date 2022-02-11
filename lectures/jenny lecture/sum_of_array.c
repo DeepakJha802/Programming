@@ -1,6 +1,6 @@
 #include<stdio.h>
 //sum of two array.
-int main()
+int main(void)
 {
     int arr1[5],arr2[5],sumarr[5],i;
     printf("Enter the eleents of 1st & 2nd array :\n");

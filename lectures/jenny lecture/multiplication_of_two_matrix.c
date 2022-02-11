@@ -1,6 +1,6 @@
 //wap to print multiplication of two matrix.
 #include<stdio.h>
-int main ()
+int main (void)
 {
     int m,n,p,q,i,j,k,sum;
     printf("Enter the rows and coloumns of 1st matrix :\n");
@@ -52,13 +52,13 @@ int main ()
                 sum=0;
                 for(k=0;k<m;k++)
                 {
-                    sum=sum+(a[i][k]*b[k][j]);                        
+                    sum=sum+(a[i][k]*b[k][j]);
                 }
                 c[i][j]=sum;
                   printf("%d ",c[i][j]);
-                
+
             }
-        }  
+        }
        /* printf("Multiplication of two matrix is :\n");
         for(i=0;i<m;i++)
         {
