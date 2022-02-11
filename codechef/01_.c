@@ -1,30 +1,26 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdbool.h>
-int main (void)
+int main(void)
 {
-    int T,A,B,X,Y;
-    scanf("%d",&T);
-
+    int T, A, B, X, Y;
+    scanf("%d", &T);
     bool answers[T];
-
     for (int i = 0; i < T; i++)
     {
-    scanf("%d %d %d %d",&A,&B,&X,&Y);
-    if (X*Y>=A*B)
-        answers[i] = true;
-    else
-        answers[i] = false;
+        scanf("%d %d %d %d", &A, &B, &X, &Y);
+        if (X * Y >= A * B)
+            answers[i] = true;
+        else
+            answers[i] = false;
     }
-
     for (int i = 0; i < T; i++)
     {
         if (answers[i])
             printf("YES\n");
         else
-        printf("NO\n");
+            printf("NO\n");
     }
 }
-
 
 // #include <stdio.h>
 // int main (void)
@@ -42,5 +38,3 @@ int main (void)
 //     printf("NO\n");
 //     }
 // }
-
-
