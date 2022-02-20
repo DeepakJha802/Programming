@@ -1,26 +1,4 @@
 
-# include <stdio.h>
-#include<math.h>
-int main() {
-	int a, rem, sum = 0;
-	scanf("%d", &a);
-	while (a--) {
-
-		int n;
-		scanf("%d", &n);
-		while(n!=0) {
-			rem = n % 10;
-			sum = sum * 10 + rem;
-			n = n / 10;
-		}
-		printf("%d\n", sum);
-		sum = 0;
-
-		}
-	return 0;
-
-	}
-
 // #include <stdio.h>
 
 // int main(void)
@@ -61,7 +39,27 @@ int main() {
 //                 printf("NO\n");
 //         }
 //     }
-
 //     return 0;
-
 // }
+
+#include <stdio.h>
+int main(void)
+{
+    int n, t;
+    scanf("%d %d", &n, &t);
+    char a[n + 1];
+    for (int i = 0; i != '\0'; i++)
+    {
+        scanf("%c", &a[i]);
+        for ( i = 0; i < n - 2; i++)
+        {
+            if (a[i] == 'B' && a[i + 1] == 'G')
+            {
+            int temp;
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+    }
+}
