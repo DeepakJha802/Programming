@@ -33,16 +33,20 @@
 
 #include <stdio.h>
 
-int main(void) {
-	// your code goes here
+int main(void)
+{
 	int t ;
     scanf("%d",&t);
     for(int i=0 ; i< t; i++)
     {
       int x , y ;
       scanf("%d %d",&x,&y);
-    printf("%d\n",10*x+y*5);
+      if(x>y)
+      printf("BIKE\n");
+      else if(x<y)
+      printf("CAR\n");
+      else if(x==y)
+      printf("SAME\n");
     }
-	return 0;
 }
 
