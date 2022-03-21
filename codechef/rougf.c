@@ -41,9 +41,9 @@ int main(void)
     {
       int x , y ;
       scanf("%d %d",&x,&y);
-      if(x>y)
+      if(x<y)
       printf("BIKE\n");
-      else if(x<y)
+      else if(x>y)
       printf("CAR\n");
       else if(x==y)
       printf("SAME\n");
