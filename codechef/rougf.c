@@ -31,22 +31,5 @@
 // // 2   2  6  10  14
 // // 3   3  7  11  15
 
-#include <stdio.h>
 
-int main(void)
-{
-	int t ;
-    scanf("%d",&t);
-    for(int i=0 ; i< t; i++)
-    {
-      int x , y ;
-      scanf("%d %d",&x,&y);
-      if(x<y)
-      printf("BIKE\n");
-      else if(x>y)
-      printf("CAR\n");
-      else if(x==y)
-      printf("SAME\n");
-    }
-}
 
