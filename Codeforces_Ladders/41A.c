@@ -19,13 +19,13 @@
 int main(void)
 {
     char s[100], t[100];
+
+    scanf("%s %s", s, t);
+
+    int l = strlen(t);
     int count = 0;
 
-    scanf("%s%s", s, t);
-
-    int l = strlen(s);
-
-    for (int i = 0; i < l; i++)
+    for (int i = 0; s[i] !='\0'; i++)
     {
         if (s[i] == t[l - i - 1])
             count++;
@@ -40,3 +40,4 @@ int main(void)
     else
         printf("NO");
 }
+
