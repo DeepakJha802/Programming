@@ -1,24 +1,28 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 
 int main(void)
 {
     int n;
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++)
+    char a[n], b[n-1];
+    bool present = false;
+    for (int i = 0; i < n; i++)
     {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        for (int j = 1; j < a; j++)
-        {
-            if (a % b != 0)
-            {
-                a++;
-            }
-            else
-            {
-                printf("%d\n", j - 1);
-                break;
-            }
-        }
+        scanf("%d %d",&a[i],&b[i]);
     }
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] == n || b[i] == n)
+        {
+            present = true ;
+        }
+        else
+        present =  false ;
+    }
+    if (present)
+    printf("I become the guy.");
+    else
+    printf("Oh, my keyboard!");
 }

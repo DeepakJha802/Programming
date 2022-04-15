@@ -8,13 +8,15 @@ int main(void)
     scanf("%s %s", a, b);
 
     int i = strcmp(a,b);
+    int j = strcmp(b,a);
+    // printf("%d %d",i,j);
 
-    if (i == 0 )
+    if (i == j )
         printf("0");
 
-    else if (i == -1)
+    else if (i < j)
         printf("-1");
-        
-    else
+
+    else if (i > j)
         printf("1");
 }
