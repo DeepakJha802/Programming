@@ -60,7 +60,7 @@ int main(void)
         else if (c == a && a < b)
         {
             b++;
-            printf("%d 0 %d\n", b - a, b - c); /* code */
+            printf("%d 0 %d\n", b - a, b - c);
         }
     }
 }
