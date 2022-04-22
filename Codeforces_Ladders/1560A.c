@@ -135,20 +135,22 @@
 //     }
 // }
 
-// #include<stdio.h>
+// #include <stdio.h>
 // int main(void)
 // {
 //     int t;
-//     scanf("%d",&t);
+//     scanf("%d", &t);
 //     while (t--)
 //     {
-//         int a , b;
-//         scanf("%d %d",&a,&b);
-//         if (a>0 && b>0)
-//         printf("Solution\n");
-//         else if (a==0)
-//         printf("Liquid\n");
-//         else if (b==0)
-//         printf("Solid\n");
+//         int a, b;
+//         scanf("%d %d", &a, &b);
+//         if (b % a != 0)
+//             printf("%d\n", b / a);
+//         else if (b%a==0 && a<b)
+//             printf("%d\n",(b/a)-1);
+//         else
+//         printf("0\n");
 //     }
 // }
+
+
