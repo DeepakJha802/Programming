@@ -153,4 +153,105 @@
 //     }
 // }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         char arr[6], arr1[6], arr2[6];
+//         for (int i = 0; i < 5; i++)
+//         {
+//             scanf("%s\n%s", arr, arr1);
+//             if (arr[i] == arr1[i])
+//             {
+//                 arr2[i] = 'G';
+//             }
+//             else
+//             {
+//                 arr2[i] = 'B';
+//             }
+//         }
+//         printf("%s\n",arr2);
+//     }
+// }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n;
+//         scanf("%d", &n);
+//         int arr[n+1], count = 0;
+//         arr[0] = 0;
+//         for (int i = 1; i <= n; i++)
+//         {
+//             scanf("%d", &arr[i]);
+//         }
+//         for (int i = 1; i < n; i++)
+//         {
+//             if (arr[i] > arr[i + 1])
+//             {
+//                 int z = arr[i];
+//                 arr[i] = arr[i+1];
+//                 arr[i+1] = z;
+//                 count++;
+
+//                 if (arr[i-1] > arr[i])
+//                 {
+//                     (count)++;
+//                     break;
+//                 }
+//             }
+//         }
+//         if (count == 0 || count == 1)
+//             printf("YES\n");
+//         else
+//             printf("NO\n");
+//     }
+// }
+
+#include <stdio.h>
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int n;
+        scanf("%d", &n);
+        int arr[n], no_positive_one = 0, no_negative_one = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            scanf("%d", &arr[i]);
+            if (arr[i] == 1)
+            {
+                no_positive_one++;
+            }
+            else
+                no_negative_one++;
+        }
+        if ( (no_negative_one % 2 == 0 && no_positive_one % 2 == 0) && (no_negative_one != 0 || no_positive_one != 0))
+        {
+            printf("YES\n");
+        }
+        else if ((no_negative_one % 2 != 0 && no_positive_one % 2 != 0))
+        {
+            printf("NO\n");
+        }
+        else if ((no_positive_one % 2 == 0 && no_negative_one % 2 != 0) && (no_positive_one != 0))
+        {
+            printf("YES\n");
+        }
+        else if ( (no_negative_one % 2 == 0 && no_positive_one % 2 != 0) && (no_negative_one != 0))
+        {
+            printf("YES\n");
+        }
+        else
+        printf("NO\n");
+    }
+}
