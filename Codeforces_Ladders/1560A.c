@@ -1,221 +1,42 @@
-
 // #include <stdio.h>
+// #include <stdlib.h>
+
 // int main(void)
 // {
 //     int t;
 //     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int x;
-//         scanf("%d", &x);
-//         if (x%10==0)
-//         printf("%d\n",x/10);
-//         else if (x % 10 == 5)
-//         printf("%d\n",(x/10)+1);
-//         else
-//         printf("-1\n");
-//     }
-// }
 
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
 //     while (t--)
 //     {
+//         int number_of_ones = 0;
+//         int number_of_minus_ones = 0;
+
 //         int n;
 //         scanf("%d", &n);
-//         int arr[n];
-//         int count = 0;
-//         for (int i = 0; i < n; i++)
+
+//         while (n--)
 //         {
-//             scanf("%d",&arr[i]);
-//             if (arr[i]>=10 && arr[i]<=60)
-//             count++;
-//         }
-//           printf("%d\n",count);
-//     }
-// }
+//             int a;
+//             scanf("%d", &a);
 
-// #include <stdio.h>
-// #include<stdlib.h>
-
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int x,y;
-//         scanf("%d %d",&x,&y);
-//         if (x == 2 && y == 4)
-//         printf("2\n");
-//         else
-//         printf("%d\n",abs((x*2)-(y)));
-
-//     }
-// }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int x,y,z,w;
-//         scanf("%d %d %d %d",&x,&y,&z,&w);
-//        if ((x-y)<=z)
-//        printf("YES\n");
-//        else if ()
-//        printf("NO\n");
-//     }
-// }
-
-// #include<stdio.h>
-// int main(void)
-// {
-//     int a , b ;
-//     scanf("%d %d",&a,&b);
-//     if (a == 1 && b == 1)
-//     printf("https://discuss.codechef.com");
-//     else if (a == 1 && b ==0)
-//     printf("https://www.codechef.com/contests");
-//     else if ( a == 0 && b == 1)
-//     printf("https://www.codechef.com/practice");
-// }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int n, k;
-//         scanf("%d %d", &n, &k);
-//         if (k == 0)
-//         {
-//             if (n % 4 == 1 || n % 4 == 2 || n % 4 == 3)
-//                 printf("ON\n");
+//             if (a == 1)
+//                 (number_of_ones)++;
 //             else
-//                 printf("OFF\n");
+//                 (number_of_minus_ones)++;
 //         }
-//         else if (k == 1)
-//         {
-//             if ( n % 4 == 0)
-//                 printf("ON\n");
-//             else
-//             printf("AMBIGUOUS\n");
-//         }
-//     }
-// }
 
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int arr[3], sum = 0, n = 0;
-//         for (int i = 0; i < 3; i++)
-//         {
-//             scanf("%d", &arr[i]);
-//             sum = sum + arr[i];
-//         }
-//         for (int i = 0; i < 2; i++)
-//         {
-//             if (arr[i] <= arr[i + 1])
-//                 n = arr[i];
-//         }
-//         printf("%d\n", (sum - n));
-//     }
-// }
+//         int difference = abs(number_of_ones - number_of_minus_ones);
 
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int a, b;
-//         scanf("%d %d", &a, &b);
-//         if (b % a != 0)
-//             printf("%d\n", b / a);
-//         else if (b%a==0 && a<b)
-//             printf("%d\n",(b/a)-1);
+//         // (number_of_ones & 1) means that number_of_ones is odd.
+//         if ((difference > 2) || ((number_of_ones & 1) && (difference == 2)))
+//             printf("No\n");
 //         else
-//         printf("0\n");
-//     }
-// }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         char arr[6], arr1[6], arr2[6];
-//         for (int i = 0; i < 5; i++)
-//         {
-//             scanf("%s\n%s", arr, arr1);
-//             if (arr[i] == arr1[i])
-//             {
-//                 arr2[i] = 'G';
-//             }
-//             else
-//             {
-//                 arr2[i] = 'B';
-//             }
-//         }
-//         printf("%s\n",arr2);
-//     }
-// }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int n;
-//         scanf("%d", &n);
-//         int arr[n+1], count = 0;
-//         arr[0] = 0;
-//         for (int i = 1; i <= n; i++)
-//         {
-//             scanf("%d", &arr[i]);
-//         }
-//         for (int i = 1; i < n; i++)
-//         {
-//             if (arr[i] > arr[i + 1])
-//             {
-//                 int z = arr[i];
-//                 arr[i] = arr[i+1];
-//                 arr[i+1] = z;
-//                 count++;
-
-//                 if (arr[i-1] > arr[i])
-//                 {
-//                     (count)++;
-//                     break;
-//                 }
-//             }
-//         }
-//         if (count == 0 || count == 1)
-//             printf("YES\n");
-//         else
-//             printf("NO\n");
+//             printf("Yes\n");
 //     }
 // }
 
 #include <stdio.h>
+
 int main(void)
 {
     int t;
@@ -224,34 +45,11 @@ int main(void)
     {
         int n;
         scanf("%d", &n);
-        int arr[n], no_positive_one = 0, no_negative_one = 0;
-        for (int i = 1; i <= n; i++)
+        int arr[n] , count = 0 , sum = 0;
+        while (n--)
         {
-            scanf("%d", &arr[i]);
-            if (arr[i] == 1)
-            {
-                no_positive_one++;
-            }
-            else
-                no_negative_one++;
+            scanf("%d",&arr[n]);
         }
-        if ( (no_negative_one % 2 == 0 && no_positive_one % 2 == 0) && (no_negative_one != 0 || no_positive_one != 0))
-        {
-            printf("YES\n");
-        }
-        else if ((no_negative_one % 2 != 0 && no_positive_one % 2 != 0))
-        {
-            printf("NO\n");
-        }
-        else if ((no_positive_one % 2 == 0 && no_negative_one % 2 != 0) && (no_positive_one != 0))
-        {
-            printf("YES\n");
-        }
-        else if ( (no_negative_one % 2 == 0 && no_positive_one % 2 != 0) && (no_negative_one != 0))
-        {
-            printf("YES\n");
-        }
-        else
-        printf("NO\n");
+        int   
     }
 }
