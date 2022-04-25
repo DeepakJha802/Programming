@@ -35,21 +35,26 @@
 //     }
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    while (t--)
-    {
-        int n;
-        scanf("%d", &n);
-        int arr[n] , count = 0 , sum = 0;
-        while (n--)
-        {
-            scanf("%d",&arr[n]);
-        }
-        int   
-    }
-}
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         char a[6], b[6];
+//             scanf("%s", a);
+//             scanf("%s", b);
+//             for (int i = 0; i == '\n'; i++)
+//             {
+//                 if (a[i] == b[i])
+//                     printf("G");
+//                 else
+//                     printf("B");
+//             }
+//             printf("\n");
+//     }
+// }
+
+
