@@ -56,3 +56,65 @@
 //             printf("\n");
 //     }
 // }
+
+// #include <stdio.h>
+
+// int main (void)
+// {
+//     int t;
+//     scanf("%d",&t);
+//     while (t--)
+//     {
+//         int  x , y , a , b , c;
+//         scanf("%d %d %d %d %d",&x,&y,&a,&b,&c);
+//         x = x / a;
+//         y = y / b;
+//         if (x >= y && y >= c)
+//         printf("YES\n");
+//         else
+//         printf("NO\n");
+//     }
+// }
+
+#include <stdio.h>
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int n, r;
+        scanf("%d %d", &n, &r);
+        int price[n], caseback[n], count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d\n%d", &price[i], &caseback[i]);
+        }
+        for (int i = 0; i < n; i++)
+        {
+            if (r >= price[i])
+            {
+                r = r - price[i] + caseback[i];
+                count++;
+            }
+        }
+        printf("%d\n", count);
+    }
+}
+
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n;
+//         scanf("%d", &n);
+//         int x = n, y = 1;
+//         if ((x + y) % 2 == 0)
+//             printf("1\n");
+//         else
+//             printf("-1\n");
+//     }
+// }
