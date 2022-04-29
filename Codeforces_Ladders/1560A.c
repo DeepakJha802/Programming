@@ -76,6 +76,7 @@
 //     }
 // }
 
+
 #include <stdio.h>
 int main(void)
 {
@@ -83,38 +84,14 @@ int main(void)
     scanf("%d", &t);
     while (t--)
     {
-        int n, r;
-        scanf("%d %d", &n, &r);
-        int price[n], caseback[n], count = 0;
-        for (int i = 0; i < n; i++)
+        int n;
+        scanf("%d", &n);
+        int count = 0;
+        do
         {
-            scanf("%d\n%d", &price[i], &caseback[i]);
-        }
-        for (int i = 0; i < n; i++)
-        {
-            if (r >= price[i])
-            {
-                r = r - price[i] + caseback[i];
-                count++;
-            }
-        }
-        printf("%d\n", count);
+            count ++;
+        } while (n % 10 == 0);
+        printf("%d\n",(count-1));
+
     }
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int n;
-//         scanf("%d", &n);
-//         int x = n, y = 1;
-//         if ((x + y) % 2 == 0)
-//             printf("1\n");
-//         else
-//             printf("-1\n");
-//     }
-// }
