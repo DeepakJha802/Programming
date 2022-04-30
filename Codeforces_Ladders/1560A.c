@@ -59,20 +59,87 @@
 
 // #include <stdio.h>
 
-// int main (void)
+// int main(void)
 // {
 //     int t;
-//     scanf("%d",&t);
+//     scanf("%d", &t);
 //     while (t--)
 //     {
-//         int  x , y , a , b , c;
-//         scanf("%d %d %d %d %d",&x,&y,&a,&b,&c);
-//         x = x / a;
-//         y = y / b;
-//         if (x >= y && y >= c)
-//         printf("YES\n");
+//         int x, y, a, b, c;
+//         scanf("%d %d %d %d %d", &x, &y, &a, &b, &c);
+//         if ((x * y) < 10)
+//         {
+//             printf("0\n");
+//         }
+//         else if (((x * y) >= 10) && ((x * y) < 21))
+//         {
+//             printf("%d\n",a);
+//         }
+//         else if (((x * y) >= 21) && ((x * y) < 42))
+//         {
+//             printf("%d\n",b);
+//         }
+//         else if ((x*y)>=42)
+//         {
+//             printf("%d\n",c);
+//         }
+//     }
+// }
+
+// #include <stdio.h>
+// #include <stdbool.h>
+
+// int main(void)
+// {
+//     // int t;
+//     // scanf("%d", &t);
+//     // while (t--)
+//     // {
+//         int n, h, x;
+//         scanf("%d %d %d", &n, &h, &x);
+//         bool he_will_get_sufficient_time_after_change_time_zone = false;
+//         while (n--)
+//         {
+//             int a;
+//             scanf("%d", &a);
+//             if ((x + a) >= h)
+//                 he_will_get_sufficient_time_after_change_time_zone = true;
+//         }
+//         if (he_will_get_sufficient_time_after_change_time_zone)
+//             printf("YES\n");
 //         else
-//         printf("NO\n");
+//             printf("NO\n");
+//     // }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, d;
+//         scanf("%d %d", &n, &d);
+//         printf("%d\n",(d/n));
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n;
+//         scanf("%d",&n);
+//         if (n % 2 == 0)
+//         {
+//            printf("%d\n",)
+//         }
 //     }
 // }
 
@@ -81,33 +148,20 @@
 // {
 //     int t;
 //     scanf("%d", &t);
-//     while (t--)
+//     int arr[t];
+//     for (int i = 0; i < t; i++)
 //     {
-//         int n, x, k;
-//         scanf("%d %d %d", &n, &x, &k);
-//         if (n >= x && n <= k)
-//             printf("Take second dose now\n");
-//         else if (n > k)
-//         {
-//             printf("Too Late\n");
-//         }
-//         else if (n < x)
-//         {
-//             printf("Too Early\n");
-//         }
+//         scanf("%d",&arr[i]);
+//     }
+//     for (int i = 0; i < t; i++)
+//     {
+//         if ((arr[i] > arr[i + 1]) && (arr[i] > arr[i + 2]))
+//             printf("CHEST\n");
+//         else if ((arr[i + 1] > arr[i]) && (arr[i + 1] > arr[i]))
+//             printf("BICEPS\n");
+//         else if ((arr[i + 2] > arr[i]) && (arr[i + 2] > arr[i + 1]))
+//             printf("BACK\n");
 //     }
 // }
 
-#include <stdio.h>
-
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    while (t--)
-    {
-        int x;
-        scanf("%d", &x);
-        
-    }
-}
+    
