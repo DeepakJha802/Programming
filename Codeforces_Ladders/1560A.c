@@ -76,22 +76,38 @@
 //     }
 // }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, x, k;
+//         scanf("%d %d %d", &n, &x, &k);
+//         if (n >= x && n <= k)
+//             printf("Take second dose now\n");
+//         else if (n > k)
+//         {
+//             printf("Too Late\n");
+//         }
+//         else if (n < x)
+//         {
+//             printf("Too Early\n");
+//         }
+//     }
+// }
 
 #include <stdio.h>
+
 int main(void)
 {
     int t;
     scanf("%d", &t);
     while (t--)
     {
-        int n;
-        scanf("%d", &n);
-        int count = 0;
-        do
-        {
-            count ++;
-        } while (n % 10 == 0);
-        printf("%d\n",(count-1));
-
+        int x;
+        scanf("%d", &x);
+        
     }
 }
