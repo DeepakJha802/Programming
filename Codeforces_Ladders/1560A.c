@@ -65,24 +65,12 @@
 //     scanf("%d", &t);
 //     while (t--)
 //     {
-//         int x, y, a, b, c;
-//         scanf("%d %d %d %d %d", &x, &y, &a, &b, &c);
-//         if ((x * y) < 10)
-//         {
-//             printf("0\n");
-//         }
-//         else if (((x * y) >= 10) && ((x * y) < 21))
-//         {
-//             printf("%d\n",a);
-//         }
-//         else if (((x * y) >= 21) && ((x * y) < 42))
-//         {
-//             printf("%d\n",b);
-//         }
-//         else if ((x*y)>=42)
-//         {
-//             printf("%d\n",c);
-//         }
+//         int x, y, z, w, a, b, c;
+//         scanf("%d %d %d %d %d %d %d", &x, &y, &z, &w, &a, &b, &c);
+//         if ((a >= x) && (b >= y) && (c >= z) && ((a + b + c) >= w))
+//             printf("YES\n");
+//         else
+//             printf("NO\n");
 //     }
 // }
 
@@ -120,9 +108,20 @@
 //     scanf("%d", &t);
 //     while (t--)
 //     {
-//         int n, d;
-//         scanf("%d %d", &n, &d);
-//         printf("%d\n",(d/n));
+//         int x , y;
+//         scanf("%d %d", &x, &y);
+//         if (x == y)
+//         {
+//             printf("%d\n",(x*2)-1);
+//         }
+//         else if (y == 0)
+//         {
+//             printf("%d\n",x);
+//         }
+//         else
+//         {
+//             printf("%d\n",(x+y));
+//         }
 //     }
 // }
 
@@ -135,32 +134,90 @@
 //     while (t--)
 //     {
 //         int n;
-//         scanf("%d",&n);
-//         if (n % 2 == 0)
+//         scanf("%d", &n);
+//         if (n == 1 || n == 2)
 //         {
-//            printf("%d\n",)
+//             printf("1\n");
 //         }
+//         else if (n == 3)
+//         {
+//             printf("2\n");
+//         }
+//         else
+//         printf("%d\n",n);
+
 //     }
 // }
 
 // #include <stdio.h>
+
 // int main(void)
 // {
 //     int t;
 //     scanf("%d", &t);
-//     int arr[t];
-//     for (int i = 0; i < t; i++)
+//     while (t--)
 //     {
-//         scanf("%d",&arr[i]);
-//     }
-//     for (int i = 0; i < t; i++)
-//     {
-//         if ((arr[i] > arr[i + 1]) && (arr[i] > arr[i + 2]))
-//             printf("CHEST\n");
-//         else if ((arr[i + 1] > arr[i]) && (arr[i + 1] > arr[i]))
-//             printf("BICEPS\n");
-//         else if ((arr[i + 2] > arr[i]) && (arr[i + 2] > arr[i + 1]))
-//             printf("BACK\n");
+//         int x, y;
+//         scanf("%d %d", &x, &y);
+//         if ((x * 100) >= (y * 10))
+//         {
+//             printf("CLOTH\n");
+//         }
+//         else if ((x * 100) < (y * 10))
+//         {
+//             printf("DISPOSABLE\n");
+//         }
 //     }
 // }
 
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+
+        int n;
+        scanf("%d", &n);
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+
+        int a;
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = i + 1; j < n; ++j)
+            {
+                if (arr[i] > arr[j])
+                {
+
+                    a = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = a;
+                }
+            }
+        }
+
+        bool condition_satisfied = true;
+        for (int i = 1; i < n - 1; i++)
+        {
+            int d = arr[i] - arr[i - 1];
+            int c = arr[i + 1] - arr[i];
+            if (2 * d != c && d != 2 * c)
+            {
+                condition_satisfied = false;
+                break;
+            }
+        }
+        
+        if(condition_satisfied)
+        printf("YES\n");
+        else
+        printf("NO\n");
+    }
+}
