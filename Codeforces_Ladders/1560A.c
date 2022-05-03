@@ -222,17 +222,60 @@
 //     }
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, k, v;
+//         scanf("%d %d %d", &n, &k, &v);
+//         int arr[n], sum = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             scanf("%d", &arr[i]);
+//             sum = sum + arr[i];
+//         }
+//         int x = ((((n + k) * v) - (sum)) / k);
+//         if ((((n + k) * v) - (sum)) < 0)
+//         {
+//             printf("-1\n");
+//         }
+//         else
+//         {
+//             if ((((n + k) * v) - (sum)) % k == 0)
+//             {
+//                 printf("%d\n",x);
+//             }
+//             else
+//             {
+//                 printf("-1\n");
+//             }
+//         }
+//     }
+// }
 
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    while (t--)
-    {
-        int x, y;
-        scanf("%d %d", &x, &y);
-        int a , b;
-        
-    }
-}
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, h;
+//         scanf("%d %d", &n, &h);
+//         int count = 0;
+//         while (n--)
+//         {
+//             int a;
+//             scanf("%d", &a);
+//             if (a > h)
+//             {
+//                 count++;
+//             }
+//         }
+//         printf("%d\n", count);
+//     }
+// }
