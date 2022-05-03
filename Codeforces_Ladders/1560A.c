@@ -170,8 +170,59 @@
 //     }
 // }
 
+// #include <stdio.h>
+// #include <stdbool.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+
+//         int n;
+//         scanf("%d", &n);
+//         int arr[n];
+//         for (int i = 0; i < n; i++)
+//         {
+//             scanf("%d", &arr[i]);
+//         }
+
+//         int a;
+//         for (int i = 0; i < n; ++i)
+//         {
+//             for (int j = i + 1; j < n; ++j)
+//             {
+//                 if (arr[i] > arr[j])
+//                 {
+
+//                     a = arr[i];
+//                     arr[i] = arr[j];
+//                     arr[j] = a;
+//                 }
+//             }
+//         }
+
+//         bool condition_satisfied = true;
+//         for (int i = 1; i < n - 1; i++)
+//         {
+//             int d = arr[i] - arr[i - 1];
+//             int c = arr[i + 1] - arr[i];
+//             if (2 * d != c && d != 2 * c)
+//             {
+//                 condition_satisfied = false;
+//                 break;
+//             }
+//         }
+
+//         if(condition_satisfied)
+//         printf("YES\n");
+//         else
+//         printf("NO\n");
+//     }
+// }
+
 #include <stdio.h>
-#include <stdbool.h>
 
 int main(void)
 {
@@ -179,45 +230,9 @@ int main(void)
     scanf("%d", &t);
     while (t--)
     {
-
-        int n;
-        scanf("%d", &n);
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            scanf("%d", &arr[i]);
-        }
-
-        int a;
-        for (int i = 0; i < n; ++i)
-        {
-            for (int j = i + 1; j < n; ++j)
-            {
-                if (arr[i] > arr[j])
-                {
-
-                    a = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = a;
-                }
-            }
-        }
-
-        bool condition_satisfied = true;
-        for (int i = 1; i < n - 1; i++)
-        {
-            int d = arr[i] - arr[i - 1];
-            int c = arr[i + 1] - arr[i];
-            if (2 * d != c && d != 2 * c)
-            {
-                condition_satisfied = false;
-                break;
-            }
-        }
+        int x, y;
+        scanf("%d %d", &x, &y);
+        int a , b;
         
-        if(condition_satisfied)
-        printf("YES\n");
-        else
-        printf("NO\n");
     }
 }
