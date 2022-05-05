@@ -256,26 +256,49 @@
 //     }
 // }
 
-// #include <stdio.h>
+#include <stdio.h>
 
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        if (a[0] < a[i+1])
+        {
+           
+        }
+
+    }
+
+}
+
+// #include <stdio.h>
 // int main(void)
 // {
+
 //     int t;
 //     scanf("%d", &t);
 //     while (t--)
 //     {
-//         int n, h;
-//         scanf("%d %d", &n, &h);
-//         int count = 0;
-//         while (n--)
+//         int n;
+//         scanf("%d",&n);
+//         int a[n];
+//         for(int i = 0; i < n; i++)
 //         {
-//             int a;
-//             scanf("%d", &a);
-//             if (a > h)
-//             {
-//                 count++;
-//             }
+//             scanf("%d",&a[i]);
 //         }
-//         printf("%d\n", count);
+
+//         if ((a[0] == 1 && a[n-1] == 0) || (a[0] == 1 && a[n-1] == 1) || (a[0] == 0 && a[n-1] == 1))
+//         printf("1\n");
+//         else
+//         printf("0\n");
 //     }
 // }
