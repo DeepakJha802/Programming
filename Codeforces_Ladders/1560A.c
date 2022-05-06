@@ -57,22 +57,39 @@
 //     }
 // }
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     int t;
-//     scanf("%d", &t);
-//     while (t--)
-//     {
-//         int x, y, z, w, a, b, c;
-//         scanf("%d %d %d %d %d %d %d", &x, &y, &z, &w, &a, &b, &c);
-//         if ((a >= x) && (b >= y) && (c >= z) && ((a + b + c) >= w))
-//             printf("YES\n");
-//         else
-//             printf("NO\n");
-//     }
-// }
+#include <stdio.h>
+#include <stdbool.h>
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        long int a, b, c, x, y;
+        scanf("%ld %ld %ld %ld %ld", &a, &b, &c, &x, &y);
+        bool result = true;
+        if (c + a >= x)
+        {
+            if (a < x)
+            {
+                if (((c + a) - x) + (b - y) >= 0)
+                {
+                    result = false;
+                }
+            }
+        }
+        else if (((c + b) - y) >= 0)
+        {
+            result = false;
+        }
+        if (result)
+        {
+            printf("NO\n");
+        }
+        else
+            printf("YES\n");
+    }
+}
 
 // #include <stdio.h>
 // #include <stdbool.h>
@@ -256,29 +273,29 @@
 //     }
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    int n;
-    scanf("%d",&n);
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (a[0] < a[i+1])
-        {
-           
-        }
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     int n;
+//     scanf("%d",&n);
+//     int a[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d",&a[i]);
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (a[0] < a[i+1])
+//         {
 
-    }
+//         }
 
-}
+//     }
+
+// }
 
 // #include <stdio.h>
 // int main(void)
