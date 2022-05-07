@@ -320,21 +320,79 @@
 // //     }
 // // }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, x, y;
+//         scanf("%d %d %d", &n, &x, &y);
+//         int a = 3*n+2*y-5;
+//         int b = 3*n+2*x-5;
+//         int c = 2*n-2+n-x+y-1 + 2*n-x-y;
+//         int d = 2*n-2+2*n-x-y+n-y+x-1;
+//         if (x >= y)
+//         {
+//             if (x+y <= n+1)
+//             {
+//                 printf("%d\n",(a));
+//             }
+//             else
+//             {
+//                 printf("%d\n",c);
+//             }
+//         }
+//         else
+//         {
+//             if (x+y <= n+1)
+//             {
+//                 printf("%d\n",b);
+//             }
+//             else
+//             {
+//                 printf("%d\n",d);
+//             }
+//         }
+//     }
+// }
 
 #include <stdio.h>
-int main (void)
+#include <stdlib.h>
+
+int main(void)
 {
     int t;
-    scanf("%d",&t);
+    scanf("%d", &t);
     while (t--)
     {
-        int x , y, z;
-        scanf("%d %d %d",&x,&y,&z);
-        if (x = 1)
-        printf("0\n");
+        int n;
+        scanf("%d", &n);
+        int arr[n];
+        int differece, max = 0;
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+        if (n == 1)
+        {
+            printf("%d\n",arr[0]);
+        }
         else
         {
-
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    differece = abs(arr[i] - (arr[i + 1] + 1));
+                    if (differece > max)
+                    {
+                        max = differece;
+                    }
+                }
+            }
+        printf("%d\n", max);
         }
     }
 }
