@@ -397,8 +397,71 @@
 //     }
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n;
+//         scanf("%d", &n);
+//         int arr[n];
+//         int min = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             scanf("%d", &arr[i]);
+//             if (i > 0 && arr[i] <= min)
+//             {
+//                 min = arr[i];
+//             }
+//             else
+//             {
+//                 if (i == 0)
+//                 {
+//                 min = arr[i];
+//                 }
+//             }
+//         }
+//         int sum = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             sum = sum + (arr[i] - min);
+//         }
+//         printf("%d\n", sum);
+//     }
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int a, b, m;
+//         scanf("%d %d %d", &a, &b, &m);
+//         if (a > b)
+//         {
+//             if ((a - b) > (m - a + b))
+//                 printf("%d\n", (m - a + b));
+//             else
+//                 printf("%d\n", (a - b));
+//         }
+//         else
+//         {
+//             if ((b - a) > (a + m - b))
+//                 printf("%d\n", (a + m - b));
+//             else
+//                 printf("%d\n", (b - a));
+//         }
+//     }
+// }
+
+#include <stdio.h>
 int main(void)
 {
     int t;
@@ -407,28 +470,37 @@ int main(void)
     {
         int n;
         scanf("%d", &n);
-        int arr[n];
-        int min = 0;
+        int a[n], b[n];
+        while (n--)
+        {
+            int x , y;
+            scanf("%d %d",&x,&y);
+            int i = 0;
+            a[i] = x;
+            b[i] = y;
+            i++;
+        }
+
+        // for (int i = 0; i < n; i++)
+        // {
+        //     scanf("%d", &a[i]);
+        // }
+        // for (int j = 0; j < n; j++)
+        // {
+        //     scanf("%d", &b[j]);
+        // }
+        int count = 0;
         for (int i = 0; i < n; i++)
         {
-            scanf("%d", &arr[i]);
-            if (i > 0 && arr[i] <= min)
+            for (int j = (n - 1); j >= 0; j--)
             {
-                min = arr[i];
-            }
-            else
-            {
-                if (i == 0)
-                {
-                min = arr[i];
-                }
+                if ((i < j) && (a[i] == b[j]) && (a[j] == b[i]))
+                    count++;
             }
         }
-        int sum = 0;
-        for (int i = 0; i < n; i++)
-        {
-            sum = sum + (arr[i] - min);
-        }
-        printf("%d\n", sum);
+        printf("%d\n", count);
     }
 }
+
+
+
