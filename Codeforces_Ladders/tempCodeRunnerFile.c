@@ -1,2 +1,2 @@
- // if (arr[i] <= arr[i + 1])
-            //     continue;
+
+    // printf("\n%d",sum_two);
