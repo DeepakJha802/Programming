@@ -207,30 +207,54 @@
 
 //////////////////////////////////////////////////////////////////////////
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int p = 1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = (n - i - 1); j > 0; j--)
+//         {
+//             printf("  ");
+//         }
+//         int m;
+//         for (int k = 1; k <= i + 1; k++)
+//         {
+//             printf("%d ", p);
+//             p++;
+//             m = p - 2;
+//         }
+//         p = p - i ;
+//         for (int l = 1; l < i + 1; l++)
+//         {
+//             printf("%d ", (m));
+//             m--;
+//         }
+//         printf("\n");
+//     }
+// }
+
+//         1
+//       2 3 2
+//     3 4 5 4 3
+//   4 5 6 7 6 5 4
+// 5 6 7 8 9 8 7 6 5
+
+//////////////////////////////////////////////////////////////////////
+
 #include <stdio.h>
-int main(void)
+
+int main ()
 {
     int n;
-    scanf("%d", &n);
-    int p = 0;
+    scanf("%d",&n);
     for (int i = 0; i < n; i++)
     {
-        for (int j = (n - i - 1); j > 0; j--)
+        for (int j = 0; j < n; j++)
         {
-            printf("  ");
+            
         }
-        int m;
-        for (int k = 1; k <= i + 1; k++)
-        {
-            p++;
-            printf("%d ", p);
-            m = p-1;
-        }
-        for (int l = 1; l < i+1; l++)
-        {
-            printf("%d ",(m));
-            m--;
-        }
-        printf("\n");
     }
 }
