@@ -3,9 +3,31 @@
 
 int main(void)
 {
-   long int t;
-    scanf("%ld", &t);
-    int n = 5;
-    printf("%ld\n",(long int)pow(n,t));
-    return 0;
+    int n, m;
+    scanf("%d %d", &n, &m);
+    int a[n], b[m];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for (int i = 0; i < m; i++)
+    {
+        scanf("%d", &b[i]);
+    }
+    int result = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int count = 0;
+        for (int j = 0; j < m; j++)
+        {
+
+            if (b[j] % a[i] == 0)
+                count++;
+        }
+        if (count == m)
+        {
+            result++;
+        }
+    }
+    printf("%d\n",result);
 }
