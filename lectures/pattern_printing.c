@@ -246,15 +246,32 @@
 
 #include <stdio.h>
 
-int main ()
+int main(void)
 {
-    int n;
-    scanf("%d",&n);
-    for (int i = 0; i < n; i++)
+    int n, count = 1;
+
+    printf("Enter number of rows : \n");
+    scanf("%d", &n);
+    count = n - 1;
+    for (int k = 1; k <= n; k++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            
-        }
+        for (int i = 1; i <= count; i++)
+            printf("  ");
+        count--;
+        for (int i = 1; i <= 2 * k - 1; i++)
+            printf(" *");
+        printf("\n");
     }
+    count = 1;
+    for (int k = 1; k <= n - 1; k++)
+    {
+        for (int i = 1; i <= count; i++)
+            printf("  ");
+        count++;
+        for (int i = 1; i <= 2 * (n - k) - 1; i++)
+            printf(" *");
+        printf("\n");
+    }
+    return 0;
 }
+
