@@ -32,22 +32,106 @@
 //     printf("%d\n",result);
 // }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    while (t--)
-    {
-        int n;
-        scanf("%d", &n);
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            scanf("%d",&arr[i]);
-        }
-        
-    }
-}
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int s, k, l, m, a;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] < 38)
+//         {
+//             printf("%d\n", arr[i]);
+//         }
+//         else
+//         {
+//             s = arr[i];
+//             k = s % 5;
+//             if (k != 0)
+//             {
+//                 l = (s / 5) + 1;
+//                 m = l * 5;
+//                 a = m - s;
+//                 if (a < 3)
+//                 {
+//                     arr[i] = m;
+//                 }
+//                 else
+//                 {
+//                     arr[i] = s;
+//                 }
+//                 printf("%d\n", arr[i]);
+//             }
+//             else
+//             {
+//                 printf("%d\n", arr[i]);
+//             }
+//         }
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int max = arr[0], min = arr[0];
+//     int count_max = 0, count_min = 0;
+//     for (int i = 1; i < n; i++)
+//     {
+//         if (max < arr[i])
+//         {
+//             count_max++;
+//             max = arr[i];
+//         }
+//     }
+//     for (int i = 1; i < n; i++)
+//     {
+//         if (min > arr[i])
+//         {
+//             count_min++;
+//             min = arr[i];
+//         }
+//     }
+//     printf("%d %d",count_max,count_min);
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n, k;
+//     scanf("%d %d", &n, &k);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int count = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if ((arr[i] + arr[j] == k) || (((arr[i] + arr[j]) % k) == 0))
+//             {
+//                 count++;
+//             }
+//         }
+//     }
+//     printf("%d",count);
+// }
+
+
