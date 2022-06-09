@@ -134,4 +134,48 @@
 //     printf("%d",count);
 // }
 
+////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int n;
+        scanf("%d", &n);
+        int arr[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+            sum = sum + arr[i];
+        }
+        int no_positive = 0, no_negative = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] == 1)
+                no_positive++;
+            else
+                no_negative++;
+        }
+        if (n % 2 == 0)
+        {
+            if (no_negative == no_positive)
+                printf("%d\n", sum / 2);
+            else if (no_negative > no_positive)
+                printf("%d\n", no_negative);
+        }
+        else
+        {
+            printf("-1\n");
+        }
+        sum = 0;
+    }
+}
