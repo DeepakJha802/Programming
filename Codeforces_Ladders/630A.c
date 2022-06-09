@@ -136,46 +136,53 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(void)
+// {
+//     int s, t;
+//     scanf("%d %d", &s, &t);
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+//     int m, n;
+//     scanf("%d %d", &m, &n);
+//     int arr[m];
 
-////////////////////////////////////////////////////////////////////////////
+//     for (int i = 0; i < m; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
 
-#include <stdio.h>
+//     int arr1[n];
 
-int main(void)
-{
-    int t;
-    scanf("%d", &t);
-    while (t--)
-    {
-        int n;
-        scanf("%d", &n);
-        int arr[n];
-        int sum = 0;
-        for (int i = 0; i < n; i++)
-        {
-            scanf("%d", &arr[i]);
-            sum = sum + arr[i];
-        }
-        int no_positive = 0, no_negative = 0;
-        for (int i = 0; i < n; i++)
-        {
-            if (arr[i] == 1)
-                no_positive++;
-            else
-                no_negative++;
-        }
-        if (n % 2 == 0)
-        {
-            if (no_negative == no_positive)
-                printf("%d\n", sum / 2);
-            else if (no_negative > no_positive)
-                printf("%d\n", no_negative);
-        }
-        else
-        {
-            printf("-1\n");
-        }
-        sum = 0;
-    }
-}
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr1[i]);
+//     }
+
+//     int no_apple = 0;
+
+//     for (int i = 0; i < m; i++)
+//     {
+//         int x = 0;
+//         x = arr[i] + a;
+//         if (s <= x && t >= x)
+//             no_apple++;
+//     }
+
+//     int no_orange = 0;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         int y = 0;
+//         y = arr1[i] + b;
+//         if (y >= s && y <= t)
+//             no_orange++;
+//     }
+
+//     printf("%d\n%d", no_apple, no_orange);
+// }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
