@@ -183,6 +183,214 @@
 //     printf("%d\n%d", no_apple, no_orange);
 // }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int k;
+//     scanf("%d", &k);
+//     int x, y;
+//     if (n % 2 == 0)
+//     {
+//         if (k % 2 == 0)
+//         {
+//             x = (n - k) / 2;
+//             y = k / 2;
+//             if (x > y)
+//             {
+//                 printf("%d\n", y);
+//             }
+//             else if (x < y)
+//             {
+//                 printf("%d\n", x);
+//             }
+//             else
+//             {
+//                 printf("%d\n", x);
+//             }
+//         }
+//         else
+//         {
+//             x = ((n - k) + 1 / 2);
+//             y = (k - 1) / 2;
+//             if (x > y)
+//             {
+//                 printf("%d\n", y);
+//             }
+//             else if (x < y)
+//             {
+//                 printf("%d\n", x);
+//             }
+//             else
+//             {
+//                 printf("%d\n", x);
+//             }
+//         }
+//     }
+//     else
+//     {
+//         if (k % 2 != 0)
+//         {
+//             x = (n - k) / 2;
+//             y = (k - 1) / 2;
+//             if (x > y)
+//             {
+//                 printf("%d\n", y);
+//             }
+//             else if (x < y)
+//             {
+//                 printf("%d\n", x);
+//             }
+//             else
+//             {
+//                 printf("%d\n", x);
+//             }
+//         }
+//         else
+//         {
+//             x = (n - k - 1) / 2;
+//             y = n / 2;
+//             if (x > y)
+//             {
+//                 printf("%d\n", y);
+//             }
+//             else if (x < y)
+//             {
+//                 printf("%d\n", x);
+//             }
+//             else
+//             {
+//                 printf("%d\n", x);
+//             }
+//         }
+//     }
+// }
+
+/////////////////////////////////////////////////////////////////////////
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int a;
+//         scanf("%d", &a);
+//         int rem, count = 0;
+//         int x = a;
+//         while (x != 0)
+//         {
+//             rem = x % 10;
+//             x = x / 10;
+//             if (a % rem == 0)
+//             {
+//                 count++;
+//             }
+//         }
+//         printf("%d\n", count);
+//     }
+// }
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, k;
+//         scanf("%d %d", &n, &k);
+//         int arr[n];
+//         for (int i = 0; i < n; i++)
+//         {
+//             scanf("%d", &arr[i]);
+//         }
+//         int count = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             if (arr[i] <= 0)
+//             {
+//                 count++;
+//             }
+//         }
+//         if (count >= k)
+//             printf("NO\n");
+//         else
+//             printf("YES\n");
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int a;
+//         scanf("%d", &a);
+//         int x = 0;
+//         for (int i = 0; i <= a; i++)
+//         {
+//             if(i % 2 == 0)
+//             {
+//                x = x + 1 ;
+//             }
+//             else
+//             {
+//                 x = x * 2;
+//             }
+//         }
+//         printf("%d\n",x);
+//     }
+// }
+
+#include <stdio.h>
+#include <stdbool.h>
+int main(void)
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int a, b;
+        scanf("%d %d", &a, &b);
+        bool equal = false;
+        int i = 1;
+        while (a <= b)
+        {
+
+            if (i % 2 != 0)
+            {
+                a = a + 1;
+            }
+            else
+            {
+                a = a + 2;
+            }
+            if (a == b)
+            {
+                equal = true;
+                printf("YES\n");
+            }
+            i++;
+        }
+
+        if (!equal)
+            // printf("YES\n");
+            // else
+            printf("NO\n");
+    }
+}
