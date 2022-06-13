@@ -372,7 +372,7 @@ int main(void)
         while (a <= b)
         {
 
-            if (i % 2 != 0)
+            if ((i & 1) != 0)
             {
                 a = a + 1;
             }
