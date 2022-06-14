@@ -357,40 +357,70 @@
 //     }
 // }
 
+// #include <stdio.h>
+// #include <stdbool.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int a, b;
+//         scanf("%d %d", &a, &b);
+//         bool equal = false;
+//         int i = 1;
+//         while (a <= b)
+//         {
+
+//             if ((i & 1) != 0)
+//             {
+//                 a = a + 1;
+//             }
+//             else
+//             {
+//                 a = a + 2;
+//             }
+//             if (a == b)
+//             {
+//                 equal = true;
+//                 printf("YES\n");
+//             }
+//             i++;
+//         }
+
+//         if (!equal)
+//             // printf("YES\n");
+//             // else
+//             printf("NO\n");
+//     }
+// }
+
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
+
 int main(void)
 {
-    int t;
-    scanf("%d", &t);
-    while (t--)
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    int no_beautiful = 0;
+    int rem = 0;
+    while (a <= b)
     {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        bool equal = false;
-        int i = 1;
-        while (a <= b)
+        int i = 0;
+        i = a;
+        int rev = 0;
+        while (i != 0)
         {
-
-            if ((i & 1) != 0)
-            {
-                a = a + 1;
-            }
-            else
-            {
-                a = a + 2;
-            }
-            if (a == b)
-            {
-                equal = true;
-                printf("YES\n");
-            }
-            i++;
+            rem = i % 10;
+            rev = (rev * 10) + rem;
+            i = i / 10;
         }
-
-        if (!equal)
-            // printf("YES\n");
-            // else
-            printf("NO\n");
+        if ((abs(a - rev) % c) == 0)
+        {
+            no_beautiful++;
+        }
+        a++;
     }
+    printf("%d\n", no_beautiful);
 }
