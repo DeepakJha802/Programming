@@ -395,32 +395,283 @@
 //     }
 // }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
+// int main(void)
+// {
+//     int a, b, c;
+//     scanf("%d %d %d", &a, &b, &c);
+
+//     int no_beautiful = 0;
+//     int rem = 0;
+//     while (a <= b)
+//     {
+//         int i = 0;
+//         i = a;
+//         int rev = 0;
+//         while (i != 0)
+//         {
+//             rem = i % 10;
+//             rev = (rev * 10) + rem;
+//             i = i / 10;
+//         }
+//         if ((abs(a - rev) % c) == 0)
+//         {
+//             no_beautiful++;
+//         }
+//         a++;
+//     }
+//     printf("%d\n", no_beautiful);
+// }
+
+// #include <stdio.h>
+// int main(void)
+// {
+//     int n, k;
+//     scanf("%d %d", &n, &k);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n - i; j++)
+//         {
+//             if (arr[i] + arr[j + 1] == k)
+//             {
+//                 printf("%d,%d\n", i, j + 1);
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n;
+//         scanf("%d", &n);
+//         int rem = 0 , count = 0 , a = n;
+//         while (a != 0)
+//         {
+//            rem = a % 10;
+//            a = a / 10;
+//            if (rem != 0 && n % rem == 0)
+//            {
+//             count++;
+//            }
+//         }
+//         printf("%d\n",count);
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     int d, m;
+//     scanf("%d %d", &d, &m);
+//     int count = 0;
+
+//     for (int i = 0; i <= n - m; i++)
+//     {
+//         int sum = 0;
+
+//         for (int j = i; j < m + i; j++)
+//         {
+//             sum = sum + arr[j];
+//         }
+
+//         if (sum == d)
+//             count++;
+//     }
+
+//     printf("%d\n", count);
+// }
+/////////////////////////////////////////////////////////////////////////
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n, d;
+//     scanf("%d %d", &n, &d);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int count = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             for (int k = j + 1; k < n; k++)
+//             {
+//                 // if (i < j && j < k)
+//                 // {
+//                     if ((arr[j] - arr[i] == d) && (arr[k] - arr[j] == d))
+//                     {
+//                         count++;
+//                     }
+//                 // }
+//             }
+//         }
+//     }
+//     printf("%d\n", count);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// #include <stdio.h>
+// int main(void)
+
+// {
+//     int b, n, m;
+//     scanf("%d %d %d", &b, &n, &m);
+//     int x[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &x[i]);
+//     }
+//     int y[m];
+//     for (int i = 0; i < m; i++)
+//     {
+//         scanf("%d", &y[i]);
+//     }
+//     int max = -1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             int sum = 0;
+//             sum = x[i] + y[j];
+//             if (sum <= b)
+//             {
+//                 // max = sum;
+//                 if (sum > max)
+//                 {
+//                     max = sum;
+//                 }
+//             }
+//         }
+//     }
+//     printf("%d\n",max);
+// }
+
+// #include <stdio.h>
+
+// int main (void)
+// {
+//     int t;
+//     scanf("%d",&t);
+//     while (t--)
+//     {
+//         int n , c ,m;
+//         scanf("%d %d %d",&n,&c,&m);
+//         int x = n / c;
+//         int max = x;
+//         while (x >= m)
+//         {
+//             int y = x / m;
+//             max = max + y;
+//             x = y + (x % m);
+//         }
+//         printf("%d\n",max);
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int max = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         int count = 1;
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (arr[i] == arr[j])
+//             {
+//                 count++;
+//             }
+//         }
+//         if (count >= max)
+//         {
+//             max = count;
+//         }
+//     }
+//     int ans = n - max;
+//     printf("%d\n",ans);
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n, t;
+//     scanf("%d %d", &n, &t);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     while (t--)
+//     {
+//         int x, y;
+//         scanf("%d %d", &x, &y);
+//         int min  = arr[x];
+//         for (int i = x; i < y; i++)
+//         {
+//             if (min > arr[i + 1])
+//             {
+//                 min = arr[i + 1];
+//             }
+//         }
+//         printf("%d\n",min);
+//     }
+// }
+
+#include <stdio.h>
 int main(void)
 {
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
-
-    int no_beautiful = 0;
-    int rem = 0;
-    while (a <= b)
+    int t;
+    scanf("%d", &t);
+    while (t--)
     {
-        int i = 0;
-        i = a;
-        int rev = 0;
-        while (i != 0)
+        int n, m, s;
+        scanf("%d %d %d", &n, &m, &s);
+        int ans = (((m + s) - 1) % n);
+        if (ans == 0)
         {
-            rem = i % 10;
-            rev = (rev * 10) + rem;
-            i = i / 10;
+            printf("%d\n", s);
         }
-        if ((abs(a - rev) % c) == 0)
+        else
         {
-            no_beautiful++;
+            printf("%d\n", ans);
         }
-        a++;
     }
-    printf("%d\n", no_beautiful);
 }
