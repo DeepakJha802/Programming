@@ -655,23 +655,143 @@
 //     }
 // }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         int n, m, s;
+//         scanf("%d %d %d", &n, &m, &s);
+//         int ans = (((m + s) - 1) % n);
+//         if (ans == 0)
+//         {
+//             printf("%d\n", s);
+//         }
+//         else
+//         {
+//             printf("%d\n", ans);
+//         }
+//     }
+// }
+
+// #include <stdio.h>
+// int main(void)
+// {
+//     int t;
+//     scanf("%d", &t);
+//     while (t--)
+//     {
+//         long long  int b, w;
+//         scanf("%lld %lld", &b, &w);
+//         long long int bc, wc, z;
+//         scanf("%lld %lld %lld", &bc, &wc, &z);
+
+//         if (bc > wc + z)
+//             printf("%lld\n", (((b + w) * wc) + (b * z)));
+
+//         else if (wc > bc + z)
+//             printf("%lld\n", (((b + w) * bc) + (w * z)));
+
+//         else
+//             printf("%lld\n", ((b * bc) + (w * wc)));
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+
+//     if ((n >= 1700) && (n <= 1917))
+//     {
+//         if (n % 4 == 0)
+//             printf("12.09.%d\n", n);
+//         else
+//             printf("13.09.%d\n", n);
+//     }
+
+//     else if (n == 1918)
+//     {
+//         printf("26.09.1918\n");
+//     }
+
+//     else if ((n >= 1919) && (n <= 2700))
+//     {
+//         if ((n % 400 == 0) || ((n % 4 == 0) && (n % 100 != 0)))
+//             printf("12.09.%d", n);
+//         else
+//             printf("13.09.%d", n);
+//     }
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(void)
+// {
+//     int n, m;
+//     scanf("%d %d", &n, &m);
+//     int arr[m];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     if (n == m)
+//     {
+//         printf("0\n");
+//     }
+//     else
+//     {
+//         int min, max = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             min = n;
+//             for (int j = 0; j < m; j++)
+//             {
+//                 if (abs(arr[j] - i) < min)
+//                 {
+//                     min = abs(arr[j] - i);
+//                 }
+//             }
+//             if (max < min)
+//             {
+//                 max = min;
+//             }
+//         }
+//         printf("%d\n", max);
+//     }
+// }
+
 #include <stdio.h>
+
 int main(void)
 {
-    int t;
-    scanf("%d", &t);
-    while (t--)
+    int n, m, y;
+    scanf("%d %d %d", &n, &m, &y);
+    int n1, m1, y1;
+    scanf("%d %d %d", &n1, &m1, &y1);
+
+    if (((n <= n1) && (m <= m1) && (y <= y1)) || ((n <= n1) || (m <= m1) || (y <= y1)))
+        {
+            printf("0\n");
+        }
+
+    else if ((n1 < n) && (m == m1) && (y == y1))
     {
-        int n, m, s;
-        scanf("%d %d %d", &n, &m, &s);
-        int ans = (((m + s) - 1) % n);
-        if (ans == 0)
-        {
-            printf("%d\n", s);
-        }
-        else
-        {
-            printf("%d\n", ans);
-        }
+        printf("%d\n", (15 * (n - n1)));
+    }
+
+    else if ((m1 < m) && (y == y1))
+    {
+        printf("%d\n", (500 * (m - m1)));
+    }
+
+    else if (y1 < y)
+    {
+        printf("10000\n");
     }
 }
