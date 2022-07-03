@@ -90,3 +90,37 @@ int main(void)
 //     }
 // }
 
+#include <stdio.h>
+int main(void)
+{
+    int i = 0;
+    int n1;
+    scanf("%d",n1);
+    int A[n1];
+    for (i = 0; i < n1; i++)
+    {
+        scanf("%d",&A[i]);
+    }
+    int ans = solve(A , n1);
+    printf("%d\n",ans);
+}
+int solve(int *A, int n1)
+{
+
+    int day = 0, sol = 0 , count = 1 , loop = 0;
+    while((count - 1) != n1)
+    {
+        sol = sol + count;
+        day = day + 1;
+        for(i = 0; i < n1; i++)
+        {
+            if(sol >= A[i])
+            {
+                count++;
+                sol = 0;
+                loop = loop + 1;
+            }
+        }
+    }
+    return day;
+}
