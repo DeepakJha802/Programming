@@ -129,5 +129,42 @@
 
 int main(void)
 {
-    (printf)("Hello");
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int x;
+        scanf("%d", &x);
+        char ch[x + 1];
+        // for (int i = 0; i < x; i++)
+        // {
+            scanf("%s", ch);
+        // }
+
+        int count = 0, temp = 0;
+
+        for (int i = 0; i <= x; i++)
+        {
+            if (count == 4)
+            {
+                temp = 1;
+            }
+            if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u')
+            {
+                count = 0;
+            }
+            else
+            {
+                count++;
+            }
+        }
+        if (temp == 0)
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+    }
 }
