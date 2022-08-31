@@ -1,22 +1,23 @@
-#include <stdio.h>
-#include <string.h>
-
+#include<stdio.h>
 int main(void)
 {
-    char a[100], b[100];
-
-    scanf("%s %s", a, b);
-
-    int i = strcmp(a,b);
-    int j = strcmp(b,a);
-    // printf("%d %d",i,j);
-
-    if (i == j )
-        printf("0");
-
-    else if (i < j)
-        printf("-1");
-
-    else if (i > j)
-        printf("1");
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int n;
+        scanf("%d",&n);
+        if (n % 7 == 0)
+        {
+            printf("%d\n",n);
+        }
+        else
+        {
+            int s = n / 7;
+            if (((s + 1) * 7)% 10 == 0)
+            {
+                printf("%d\n",(s + 1) * 7);
+            }
+        }
+    }
 }
