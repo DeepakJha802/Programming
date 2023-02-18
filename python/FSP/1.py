@@ -124,3 +124,6 @@
 
 
 
+A = (2, 4.4, “Mary”, “List”, “Sam”)
+del A(1)
+print(A)
